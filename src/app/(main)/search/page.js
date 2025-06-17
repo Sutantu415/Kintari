@@ -1,6 +1,7 @@
 'use client';
 
 import StoryCard from "@/components/cards/StoryCard";
+import PrivateRoute from "@/components/PrivateRoute";
 import Header from "@/ui/Header";
 import MainBackground from "@/ui/MainBackground";
 import Searchbar from "@/ui/Searchbar";
@@ -30,22 +31,24 @@ export default function Search() {
     }, []);
     
     return (
-        <MainBackground>
-            <Header />
-            <div className="h-1/3 flex flex-col justify-center items-center">
-                <Searchbar placeholder={"Find a story..."} value={search} onChange={(e) => setSearch(e.target.value)} onSubmit={handleSearch} />  
-            </div>
-
-            {/* Stories */}
-            <div className="h-full w-full flex justify-center items-center">
-                <div className="h-full grid grid-cols-4 gap-15">
-                    {
-                        data.map((story) => (
-                            <StoryCard key={story.id} title={story.name} color={story.color} image={story.image} country={story.Countries.name} theme={story.Themes.name} />
-                        ))
-                    }
+        <PrivateRoute>
+            <MainBackground>
+                <Header />
+                <div className="h-1/3 flex flex-col justify-center items-center">
+                    <Searchbar placeholder={"Find a story..."} value={search} onChange={(e) => setSearch(e.target.value)} onSubmit={handleSearch} />  
                 </div>
-            </div>
-        </MainBackground>
+
+                {/* Stories */}
+                <div className="h-full w-full flex justify-center items-center">
+                    <div className="h-full grid grid-cols-4 gap-15">
+                        {
+                            data.map((story) => (
+                                <StoryCard key={story.id} title={story.name} color={story.color} image={story.image} country={story.Countries.name} theme={story.Themes.name} />
+                            ))
+                        }
+                    </div>
+                </div>
+            </MainBackground>
+        </PrivateRoute>
     );
 }
