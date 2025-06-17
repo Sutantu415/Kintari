@@ -27,7 +27,7 @@ export default function Dashboard() {
                 <div className="h-full flex flex-col items-center justify-center">
                     <Image src={logo} alt="Logo" width={300} height={300}/>    
                     <h1 className="text-[80px] -mt-15 mb-5 font-bold text-[#1d2951] drop-shadow-[0_4px_6px_rgba(0,0,0,0.25)] font-[\'Fredoka\',sans-serif]">Kintari</h1>
-                    <Searchbar placeholder={"Find a story..."} value={search} onChange={(e) => setSearch(e.target.value)} onSubmit={handleSearch} />
+                    <Searchbar placeholder={"Search Story by Country or Moral"} value={search} onChange={(e) => setSearch(e.target.value)} onSubmit={handleSearch} />
                 </div>
             </MainBackground>
         </PrivateRoute>
