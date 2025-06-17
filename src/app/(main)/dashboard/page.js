@@ -45,7 +45,7 @@ export default function Dashboard() {
                 <div className="flex justify-center">
                     <div className="flex-1" />
                     <div className="p-4">
-                        <button onClick={handleSignOut} className="px-6 py-3 rounded-full border-2 border-gray-500 shadow-md text-[#1d2951] bg-gray-400 text-lg hover:bg-green-50 active:scale-95 transition">Log Out</button>
+                        <button onClick={handleSignOut} className="px-6 py-3 rounded-full border-2 border-gray-500 shadow-md text-[#1d2951] bg-gray-400 text-lg cursor-pointer hover:bg-green-50 active:scale-95 transition">Log Out</button>
                     </div>
                 </div>
             </div>

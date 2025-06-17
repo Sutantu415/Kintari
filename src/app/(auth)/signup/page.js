@@ -67,14 +67,14 @@ export default function SignUp() {
                     className="w-full bg-white w-md px-6 py-3 rounded-full border-2 border-green-400 shadow-md text-gray-600 placeholder-gray-400 text-lg focus:outline-none"
                     />
                     <input
-                    type="text"
+                    type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="w-full bg-white w-md px-6 py-3 rounded-full border-2 border-green-400 shadow-md text-gray-600 placeholder-gray-400 text-lg focus:outline-none"
                     />
                     <input
-                    type="text"
+                    type="password"
                     placeholder="Confirm Password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
@@ -83,7 +83,7 @@ export default function SignUp() {
                 </div>
             
                 <div className="flex flex-col items-center justify-center mt-5 space-y-2">
-                    <button type="submit" disabled={loading} className="px-6 py-3 rounded-full border-2 border-gray-500 shadow-md text-[#1d2951] bg-gray-400 text-lg hover:bg-green-50 active:scale-95 transition">Sign Up</button>
+                    <button type="submit" disabled={loading} className="px-6 py-3 rounded-full border-2 border-gray-500 shadow-md text-[#1d2951] bg-gray-400 text-lg cursor-pointer hover:bg-green-50 active:scale-95 transition">Sign Up</button>
                     <div className="flex items-center justify-center space-x-3 text-[#1d2951]">
                     <Link href={"/login"}>Log In</Link>
                     <p>|</p>
